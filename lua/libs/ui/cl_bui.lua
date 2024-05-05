@@ -141,6 +141,16 @@ BUi.LerpColor = function(frac, from, to)
 	)
 end
 
+BUi.Truncate = function(name, len)
+    len = len or 19
+
+    if #name > len then
+        name = string.sub(name, 1, len) .. "..."
+    end
+
+    return name
+end
+
 //Various handy premade transition functions
 BUi.HoverFunc = function(s) return s:IsHovered() end
 BUi.HoverFuncChild = function(s) return s:IsHovered() || s:IsChildHovered() end
@@ -198,7 +208,7 @@ classes.FadeHover = function(pnl, col, speed, rad)
 	speed = speed || 6
 
 	pnl:SetupTransition("FadeHover", speed, BUi.HoverFunc)
-	pnl:On("Paint", function(s, w, h)
+	pnl:On("PaintOver", function(s, w, h)
 		local col = ColorAlpha(col, col.a*s.FadeHover)
 
 		if(rad && rad > 0) then

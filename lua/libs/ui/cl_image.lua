@@ -50,7 +50,7 @@ local materials_img = {}
 local grabbingMaterials = {}
 local getImgur = BUi.GetImgur
 
-getImgur("8jXb05I", function(mat)
+getImgur("9Xg5Q8d", function(mat)
     progressMat = mat
 end)
 

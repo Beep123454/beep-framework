@@ -1,3 +1,4 @@
+--taken from somewhere no idea where credits to whoever made this
 local PANEL = {}
 AccessorFunc(PANEL, "bounceHeight", "BounceHeight", FORCE_NUMBER)
 AccessorFunc(PANEL, "scrollSpeed", "ScrollSpeed", FORCE_NUMBER)
